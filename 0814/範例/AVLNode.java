@@ -21,4 +21,15 @@ public class AVLNode {
         int rightHeight = (right != null) ? right.height : 0;
         this.height = Math.max(leftHeight, rightHeight) + 1;
     }
+
+    // main 方法測試
+    public static void main(String[] args) {
+        AVLNode root = new AVLNode(10);
+        root.left = new AVLNode(5);
+        root.right = new AVLNode(15);
+
+        root.updateHeight();
+        System.out.println("根節點高度: " + root.height);
+        System.out.println("根節點平衡因子: " + root.getBalance());
+    }
 }

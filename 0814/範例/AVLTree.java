@@ -238,4 +238,32 @@ public class AVLTree {
             printInOrder(node.right);
         }
     }
+
+    public static void main(String[] args) {
+        AVLTree tree = new AVLTree();
+
+        // 插入節點
+        tree.insert(30);
+        tree.insert(20);
+        tree.insert(40);
+        tree.insert(10);
+        tree.insert(25);
+        tree.insert(35);
+        tree.insert(50);
+
+        System.out.print("中序列印: ");
+        tree.printTree();
+
+        // 搜尋
+        System.out.println("搜尋 25: " + tree.search(25)); // true
+        System.out.println("搜尋 100: " + tree.search(100)); // false
+
+        // 刪除
+        tree.delete(20);
+        System.out.print("刪除 20 後中序列印: ");
+        tree.printTree();
+
+        // 驗證 AVL
+        System.out.println("是否為有效 AVL 樹: " + tree.isValidAVL());
+    }
 }
