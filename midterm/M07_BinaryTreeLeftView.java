@@ -88,8 +88,11 @@ public class M07_BinaryTreeLeftView {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
+        System.out.print("請輸入節點數量: ");
         // 讀取輸入
         int n = scanner.nextInt();
+        
+        System.out.print("請輸入層序遍歷陣列 (用 -1 表示空節點): ");
         int[] arr = new int[n];
         
         for (int i = 0; i < n; i++) {
@@ -112,10 +115,3 @@ public class M07_BinaryTreeLeftView {
         scanner.close();
     }
 }
-
-/*
- * Time Complexity: O(n)
- * 說明：建立樹需要 O(n) 時間遍歷所有輸入節點
- *       BFS 遍歷樹的每個節點一次，時間複雜度為 O(n)
- *       總時間複雜度為 O(n) + O(n) = O(n)，其中 n 為樹的節點數
- */

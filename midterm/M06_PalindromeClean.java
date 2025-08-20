@@ -5,6 +5,7 @@ public class M06_PalindromeClean {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
+        System.out.print("請輸入要檢測的字串: ");
         // 讀取一行字串
         String input = sc.nextLine();
         
@@ -180,25 +181,3 @@ public class M06_PalindromeClean {
     }
 }
 
-/*
- * Time Complexity: O(n)
- * 說明：回文檢測的時間複雜度分析
- * 1. 方法1（雙指標）：遍歷字串一次，每個字符最多被檢查一次，時間複雜度 O(n)
- * 2. 方法2（預處理）：清洗字串 O(n) + 遞迴檢測 O(m)，其中 m 是清洗後字串長度 ≤ n，總體 O(n)
- * 3. 兩種方法的時間複雜度都是線性的
- * 
- * Space Complexity:
- * 方法1（雙指標）：O(1) - 只使用常數個變數
- * 方法2（預處理）：O(n) - 需要額外空間存儲清洗後的字串 + O(n) 遞迴堆疊
- * 
- * 推薦使用方法1，因為：
- * 1. 空間效率更高：O(1) vs O(n)
- * 2. 不需要預處理步驟，直接在原字串上操作
- * 3. 適合處理大型字串（長度達 10^5）
- * 
- * 演算法特點：
- * - 忽略非英文字母字符（數字、標點符號、空格等）
- * - 不區分大小寫
- * - 支援空字串和單字符（視為回文）
- * - 兩種實作方法結果完全一致
- */

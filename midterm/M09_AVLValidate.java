@@ -136,8 +136,11 @@ public class M09_AVLValidate {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
+        System.out.print("請輸入節點數量: ");
         // 讀取輸入
         int n = scanner.nextInt();
+        
+        System.out.print("請輸入層序遍歷陣列 (用 -1 表示空節點): ");
         int[] arr = new int[n];
         
         for (int i = 0; i < n; i++) {

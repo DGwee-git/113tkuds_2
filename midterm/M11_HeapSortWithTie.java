@@ -186,8 +186,11 @@ public class M11_HeapSortWithTie {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
+        System.out.print("請輸入學生數量: ");
         // 讀取輸入
         int n = scanner.nextInt();
+        
+        System.out.print("請輸入 " + n + " 個學生成績: ");
         int[] scores = new int[n];
         
         for (int i = 0; i < n; i++) {

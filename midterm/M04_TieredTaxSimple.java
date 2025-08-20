@@ -10,9 +10,11 @@ public class M04_TieredTaxSimple {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
+        System.out.print("請輸入測試案例數量: ");
         // 讀取測試案例數量
         int n = sc.nextInt();
         
+        System.out.println("請輸入 " + n + " 個年度收入:");
         long totalTax = 0; // 總稅額，用於計算平均
         
         // 處理每個收入

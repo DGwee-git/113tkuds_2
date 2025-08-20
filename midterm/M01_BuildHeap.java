@@ -5,8 +5,13 @@ public class M01_BuildHeap {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        System.out.print("請輸入堆的類型 (max 或 min): ");
         String type = sc.next().trim(); // "max" or "min"
+        
+        System.out.print("請輸入陣列大小: ");
         int n = sc.nextInt();
+        
+        System.out.print("請輸入 " + n + " 個整數 (用空格分隔): ");
         int[] arr = new int[n];
         for (int i = 0; i < n; i++) arr[i] = sc.nextInt();
 

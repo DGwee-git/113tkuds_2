@@ -176,8 +176,11 @@ public class M10_RBPropertiesCheck {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
+        System.out.print("請輸入節點數量: ");
         // 讀取輸入
         int n = scanner.nextInt();
+        
+        System.out.println("請輸入 " + n + " 個節點資訊 (節點值 顏色):");
         int[] values = new int[n];
         char[] colors = new char[n];
         
@@ -205,10 +208,3 @@ public class M10_RBPropertiesCheck {
     }
 }
 
-/*
- * Time Complexity: O(n)
- * 說明：checkRootBlack 為 O(1) 常數時間檢查
- *       checkRedRedViolation 需要遍歷每個節點檢查紅紅相鄰，時間複雜度 O(n)
- *       checkBlackHeight 使用後序遍歷計算每個節點的黑高度，時間複雜度 O(n)
- *       總時間複雜度為 O(1) + O(n) + O(n) = O(n)，其中 n 為樹的節點數
- */

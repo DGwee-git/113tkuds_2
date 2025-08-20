@@ -151,12 +151,17 @@ public class M12_MergeKTimeTables {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
+        System.out.print("請輸入支線數量: ");
         // 讀取輸入
         int k = scanner.nextInt();
+        
         List<List<Integer>> timeTables = new ArrayList<>();
         
         for (int i = 0; i < k; i++) {
+            System.out.print("請輸入第 " + (i+1) + " 條支線的時刻數量: ");
             int len = scanner.nextInt();
+            
+            System.out.print("請輸入第 " + (i+1) + " 條支線的時刻 (用空格分隔): ");
             List<Integer> timeTable = new ArrayList<>();
             
             for (int j = 0; j < len; j++) {
@@ -198,10 +203,3 @@ public class M12_MergeKTimeTables {
     }
 }
 
-/*
- * Time Complexity: O(N log K)
- * 說明：設所有時刻表的總元素數量為 N，支線數量為 K
- *       每個元素都會被插入和取出堆一次，每次堆操作的時間複雜度為 O(log K)
- *       因此總時間複雜度為 O(N log K)
- *       空間複雜度為 O(K + N)，其中 O(K) 用於堆存儲，O(N) 用於結果存儲
- */

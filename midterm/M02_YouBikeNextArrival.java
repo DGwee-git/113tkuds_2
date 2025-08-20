@@ -71,7 +71,7 @@ public class M02_YouBikeNextArrival {
             int mid = left + (right - left) / 2;
             
             if (arr[mid] > target) {
-                // 當前元素大於目標值，記錄結果並繼續在左半部分搜尋
+             // 當前元素大於目標值，記錄結果並繼續在左半部分搜尋
                 result = mid;
                 right = mid - 1;
             } else {
@@ -84,10 +84,3 @@ public class M02_YouBikeNextArrival {
     }
 }
 
-/*
- * Time Complexity: O(log n)
- * 說明：二分搜尋的時間複雜度分析
- * 1. 時間轉換操作為 O(1)，總共執行 n+1 次，時間複雜度為 O(n)
- * 2. 二分搜尋在已排序陣列中查找，每次比較後搜尋範圍縮小一半，時間複雜度為 O(log n)
- * 3. 總體時間複雜度為 O(n + log n) = O(n)，但搜尋部分是 O(log n)
- */

@@ -118,15 +118,21 @@ public class M08_BSTRangedSum {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
+        System.out.print("請輸入節點數量: ");
         // 讀取輸入
         int n = scanner.nextInt();
+        
+        System.out.print("請輸入層序遍歷陣列 (用 -1 表示空節點): ");
         int[] arr = new int[n];
         
         for (int i = 0; i < n; i++) {
             arr[i] = scanner.nextInt();
         }
         
+        System.out.print("請輸入區間下界 L: ");
         int L = scanner.nextInt();
+        
+        System.out.print("請輸入區間上界 R: ");
         int R = scanner.nextInt();
         
         // 建立BST
@@ -142,9 +148,3 @@ public class M08_BSTRangedSum {
     }
 }
 
-/*
- * Time Complexity: O(n) 最壞情況，O(log n + k) 平均情況
- * 說明：在最壞情況下（不平衡的BST），需要訪問所有節點，時間複雜度為O(n)
- *       在平均情況下（平衡的BST），利用BST性質剪枝，只需訪問O(log n)個節點加上區間內的k個節點
- *       空間複雜度為O(h)，其中h為樹的高度，用於遞歸調用棧
- */

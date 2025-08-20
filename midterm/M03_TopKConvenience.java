@@ -18,8 +18,11 @@ public class M03_TopKConvenience {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
+        System.out.print("請輸入商品數量: ");
         // 讀取商品數量和 K 值
         int n = sc.nextInt();
+        
+        System.out.print("請輸入要查詢的 Top-K 值: ");
         int k = sc.nextInt();
         
         // 使用 Min-Heap 維護 Top-K
@@ -31,6 +34,7 @@ public class M03_TopKConvenience {
             return Integer.compare(b.order, a.order); // 輸入順序大的優先（後進先出）
         });
         
+        System.out.println("請輸入 " + n + " 個商品資訊 (商品名稱 銷量):");
         // 處理每個商品
         for (int i = 0; i < n; i++) {
             String name = sc.next();

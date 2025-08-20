@@ -5,8 +5,11 @@ public class M05_GCD_LCM_Recursive {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
+        System.out.print("請輸入第一個正整數: ");
         // 讀取兩個正整數
         long a = sc.nextLong();
+        
+        System.out.print("請輸入第二個正整數: ");
         long b = sc.nextLong();
         
         // 計算 GCD
