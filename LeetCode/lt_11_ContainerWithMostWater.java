@@ -1,12 +1,12 @@
 public class lt_11_ContainerWithMostWater {
     public int maxArea(int[] height) {
         int left = 0, right = height.length - 1;
-        int maxArea = 0;
+        int max = 0;
 
         while (left < right) {
             int h = Math.min(height[left], height[right]);
             int width = right - left;
-            maxArea = Math.max(maxArea, h * width);
+            max = Math.max(max, h * width);
 
             if (height[left] < height[right]) {
                 left++;
@@ -14,29 +14,20 @@ public class lt_11_ContainerWithMostWater {
                 right--;
             }
         }
-
-        return maxArea;
+        return max;
     }
 
-    // 測試程式
     public static void main(String[] args) {
         lt_11_ContainerWithMostWater solution = new lt_11_ContainerWithMostWater();
-
-        int[] height1 = { 1, 8, 6, 2, 5, 4, 8, 3, 7 };
-        System.out.println("Example 1:");
-        System.out.println("Input: [1,8,6,2,5,4,8,3,7]");
-        System.out.println("Output: " + solution.maxArea(height1)); // 49
-        System.out.println();
-
-        int[] height2 = { 1, 1 };
-        System.out.println("Example 2:");
-        System.out.println("Input: [1,1]");
-        System.out.println("Output: " + solution.maxArea(height2)); // 1
-        System.out.println();
-
-        int[] height3 = { 4, 3, 2, 1, 4 };
-        System.out.println("Extra Example:");
-        System.out.println("Input: [4,3,2,1,4]");
-        System.out.println("Output: " + solution.maxArea(height3)); // 16
+        int[] height = {1,8,6,2,5,4,8,3,7};
+        System.out.println("最大盛水量: " + solution.maxArea(height)); // 預期 49
     }
 }
+
+/*
+解題思路：
+- 使用雙指針，一開始分別在最左和最右。
+- 每次計算面積 = min(高度) * 寬度。
+- 為了找到更大的容器，移動較矮的一邊。
+- 時間複雜度 O(n)。
+*/
